@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/generators/UniqueIdGenerator.ts"],
+  "sourcesContent": ["export interface GeneratorOptions {\r\n    unique?: boolean;\r\n}\r\n\r\n\r\nexport default class UniqueIdGenerator {\r\n\r\n    constructor(){\r\n        this.generate.bind(this);\r\n    };\r\n    \r\n    generate(options: GeneratorOptions = {}): string {\r\n        return \"\";\r\n    };\r\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAKA,wBAAuC;AAAA,EAEnC,cAAa;AACT,SAAK,SAAS,KAAK;AAAA;AAAA,EAGvB,SAAS,UAA4B,IAAY;AAC7C,WAAO;AAAA;AAAA;",
+  "names": []
+}

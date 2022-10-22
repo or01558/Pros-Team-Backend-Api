@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/rest/resources/users/dms/dm/DeleteDm.ts"],
+  "sourcesContent": ["import express from \"express\";\r\nimport RequestHandler from \"../../../../../classes/RequestHandler\";\r\n\r\n\r\nexport default class DeleteDm extends RequestHandler {\r\n\r\n    constructor(requset: express.Request, response: express.Response, next: express.NextFunction) {\r\n        super(requset, response, next);\r\n    }\r\n\r\n    public call(): any {\r\n        //delete dm..\r\n    }\r\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AACA,4BAA2B;AAG3B,uBAAsC,8BAAe;AAAA,EAEjD,YAAY,SAA0B,UAA4B,MAA4B;AAC1F,UAAM,SAAS,UAAU;AAAA;AAAA,EAGtB,OAAY;AAAA;AAAA;",
+  "names": []
+}

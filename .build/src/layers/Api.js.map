@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/layers/Api.ts"],
+  "sourcesContent": ["import { ErrorRequestHandler } from \"express\";\r\nimport { ParamsDictionary } from \"express-serve-static-core\";\r\nimport { ParsedQs } from \"qs\";\r\nimport Layer from \"../classes/Layer.js\";\r\nimport { Layers } from \"../classes/Server.js\";\r\n\r\nexport default class Api extends Layer<Layers.RESTApi>{\r\n    public selfCall: ErrorRequestHandler<ParamsDictionary, any, any, ParsedQs, Record<string, any>> = (data, req, res, next) => {\r\n        \r\n        const apiKey = req.headers['pros-team-api-key'];\r\n\r\n        if (!apiKey) return res.status(400).send({ message: \"Missing Access\", reason: \"No Api Access\", requested: \"Api Access\", provided: \"None Api Key\", status: 400 });\r\n\r\n        if (typeof apiKey === \"string\" && !data.api.hasAccess(apiKey)) {\r\n            return res.status(403).json({ message: \"Missing Access\", reason: \"No Api Access\", requested: \"Api Access\", provided: \"Invalid Api Key\", status: 403 })\r\n        };\r\n\r\n        next();\r\n\r\n    };\r\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAGA,mBAAkB;AAGlB,kBAAiC,qBAAqB;AAAA,EAC3C,WAA2F,CAAC,MAAM,KAAK,KAAK,SAAS;AAExH,UAAM,SAAS,IAAI,QAAQ;AAE3B,QAAI,CAAC;AAAQ,aAAO,IAAI,OAAO,KAAK,KAAK,EAAE,SAAS,kBAAkB,QAAQ,iBAAiB,WAAW,cAAc,UAAU,gBAAgB,QAAQ;AAE1J,QAAI,OAAO,WAAW,YAAY,CAAC,KAAK,IAAI,UAAU,SAAS;AAC3D,aAAO,IAAI,OAAO,KAAK,KAAK,EAAE,SAAS,kBAAkB,QAAQ,iBAAiB,WAAW,cAAc,UAAU,mBAAmB,QAAQ;AAAA;AACnJ;AAED;AAAA;AAAA;",
+  "names": []
+}

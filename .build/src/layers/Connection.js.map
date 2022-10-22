@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/layers/Connection.ts"],
+  "sourcesContent": ["import { ErrorRequestHandler } from \"express\";\r\nimport { ParamsDictionary } from \"express-serve-static-core\";\r\nimport { ParsedQs } from \"qs\";\r\nimport Layer from \"../classes/Layer.js\";\r\nimport { Layers } from \"../classes/Server.js\";\r\n\r\nexport default class Connection extends Layer<Layers.Connection>{\r\n    public selfCall: ErrorRequestHandler<ParamsDictionary, any, any, ParsedQs, Record<string, any>> = (data, req, res, next) => {\r\n        console.log(\"Connection\");\r\n        next();\r\n    };\r\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAGA,mBAAkB;AAGlB,yBAAwC,qBAAwB;AAAA,EACrD,WAA2F,CAAC,MAAM,KAAK,KAAK,SAAS;AACxH,YAAQ,IAAI;AACZ;AAAA;AAAA;",
+  "names": []
+}

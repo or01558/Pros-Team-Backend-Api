@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/rest/resources/Resources.ts"],
+  "sourcesContent": ["export class UserResources {\r\n    public static resources: Set<string> = new Set<string>().add(\"dashboard\").add(\"settings\").add(\"developers\").add(\"team\");\r\n\r\n    public static has(resource: string) {\r\n        return this.resources.has(resource.replace(\"/\", \"\"));\r\n    }\r\n\r\n}\r\n\r\nexport function isUserResource(resource: string) {\r\n    return UserResources.has(resource);\r\n}\r\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAAO,oBAAoB;AAAA,SACT,YAAyB,IAAI,MAAc,IAAI,aAAa,IAAI,YAAY,IAAI,cAAc,IAAI;AAAA,SAElG,IAAI,UAAkB;AAChC,WAAO,KAAK,UAAU,IAAI,SAAS,QAAQ,KAAK;AAAA;AAAA;AAKjD,wBAAwB,UAAkB;AAC7C,SAAO,cAAc,IAAI;AAAA;",
+  "names": []
+}

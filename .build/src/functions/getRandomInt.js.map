@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/functions/getRandomInt.ts"],
+  "sourcesContent": ["export default function getRandomInt(min: number, max: number) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min + 1)) + min;\r\n};"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAe,sBAAsB,KAAa,KAAa;AAC3D,QAAM,KAAK,KAAK;AAChB,QAAM,KAAK,MAAM;AACjB,SAAO,KAAK,MAAM,KAAK,WAAY,OAAM,MAAM,MAAM;AAAA;AACxD;",
+  "names": []
+}

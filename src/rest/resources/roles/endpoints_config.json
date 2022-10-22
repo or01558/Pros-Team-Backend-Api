@@ -1,0 +1,4 @@
+{
+"target": "${action}${endPoint}",
+"endPoints": ["Role", "Roles"]
+}

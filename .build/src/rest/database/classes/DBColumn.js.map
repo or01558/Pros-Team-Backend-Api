@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/rest/database/classes/DBColumn.ts"],
+  "sourcesContent": ["export default interface DBColumn {\r\n    type: any;\r\n    _sql_type_name: string;\r\n}"],
+  "mappings": ";;AAAA;",
+  "names": []
+}

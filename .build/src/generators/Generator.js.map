@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/generators/Generator.ts"],
+  "sourcesContent": ["import KeyGenerator from \"./KeyGenerator.js\";\r\nimport UniqueIdGenerator from \"./UniqueIdGenerator.js\";\r\n\r\nexport default class Generator {\r\n    public static KeyGen = new KeyGenerator();\r\n    public static Ids = new UniqueIdGenerator();\r\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,0BAAyB;AACzB,+BAA8B;AAE9B,gBAA+B;AAAA,SACb,SAAS,IAAI;AAAA,SACb,MAAM,IAAI;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/classes/Layer.ts"],
+  "sourcesContent": ["import EventEmitter from \"events\";\r\nimport express from \"express\";\r\nimport { Layers } from \"./Server.js\";\r\n\r\nexport default abstract class Layer<T = Layers> extends EventEmitter {\r\n\r\n    #finished: boolean;\r\n    protected request: express.Request;\r\n    protected response: express.Response;\r\n\r\n    constructor() {\r\n        super();\r\n        this.#finished = false;\r\n    };\r\n\r\n    public abstract selfCall: express.ErrorRequestHandler;\r\n\r\n    finish() {\r\n        const request = this.request;\r\n        const response = this.response;\r\n        this.#finished = true;\r\n        this.emit(\"finish\", request.app, request, response);\r\n    };\r\n\r\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,oBAAyB;AAIzB,oBAAwD,sBAAa;AAAA;AAAA,EAGvD;AAAA,EACA;AAAA,EAEV,cAAc;AACV;AACA,qBAAiB;AAAA;AAAA,EAKrB,SAAS;AACL,UAAM,UAAU,KAAK;AACrB,UAAM,WAAW,KAAK;AACtB,qBAAiB;AACjB,SAAK,KAAK,UAAU,QAAQ,KAAK,SAAS;AAAA;AAAA;",
+  "names": []
+}

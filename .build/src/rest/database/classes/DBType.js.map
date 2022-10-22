@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/rest/database/classes/DBType.ts"],
+  "sourcesContent": ["export default class DBType<T> {\r\n    private value: T;\r\n\r\n    constructor(value: T) {\r\n        this.value = value;\r\n        this.getValue.bind(this);\r\n        this.setValue.bind(this);\r\n    }\r\n\r\n    getValue(): T {\r\n        return this.value;\r\n    };\r\n\r\n    setValue(value: T): void {\r\n        this.value = value;\r\n    };\r\n}"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA,aAA+B;AAAA,EACnB;AAAA,EAER,YAAY,OAAU;AAClB,SAAK,QAAQ;AACb,SAAK,SAAS,KAAK;AACnB,SAAK,SAAS,KAAK;AAAA;AAAA,EAGvB,WAAc;AACV,WAAO,KAAK;AAAA;AAAA,EAGhB,SAAS,OAAgB;AACrB,SAAK,QAAQ;AAAA;AAAA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../testDatabase.ts"],
+  "sourcesContent": ["import Server from \"./src/classes/Server.js\";\r\nimport DBTable, { VarcharType } from \"./src/rest/database/classes/DBTable.js\";\r\nimport Tables from \"./src/rest/database/classes/Tables.js\";\r\nimport UserObject, { User } from \"./src/rest/database/objects/users/UserObject.js\";\r\n\r\n\r\nexport default async function testDatabase() {\r\n    const db = Server.Database;\r\n    const user = new UserObject(\"1k1k1k\", {\r\n        username: \"Or\",\r\n        password: \"123456\",\r\n        email: \"orchoo9@gmail.com\", \r\n    });\r\n    db.createObject(user).then(v => {\r\n        console.log(v);\r\n    }).catch(err => console.log(err));\r\n}\r\n;\r\n//# sourceMappingURL=testDatabase.js.map\r\n//# sourceMappingURL=testDatabase.js.map"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,oBAAmB;AAGnB,wBAAiC;AAGjC,8BAA6C;AACzC,QAAM,KAAK,sBAAO;AAClB,QAAM,OAAO,IAAI,0BAAW,UAAU;AAAA,IAClC,UAAU;AAAA,IACV,UAAU;AAAA,IACV,OAAO;AAAA;AAEX,KAAG,aAAa,MAAM,KAAK,OAAK;AAC5B,YAAQ,IAAI;AAAA,KACb,MAAM,SAAO,QAAQ,IAAI;AAAA;AAEhC;",
+  "names": []
+}
