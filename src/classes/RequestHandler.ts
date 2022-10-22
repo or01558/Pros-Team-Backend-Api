@@ -9,6 +9,7 @@ export type JsList = Data_Structures.List<JsObject>;
 export type BodyValuesTypes = JsNumber | JsString | JsBoolean | JsObject | JsList;
 
 export interface RequestBody {
+   type: "object";
    [key: string] : BodyValuesTypes;
 };
 
